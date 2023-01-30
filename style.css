@@ -24,6 +24,10 @@ i {
   }
 }
 
+#expenseBtn, #incomeBtn{
+  font-variant: small-caps;
+}
+
 #child-main{
     height: 100vh;
 }
