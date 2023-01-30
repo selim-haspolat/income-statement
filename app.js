@@ -90,7 +90,7 @@ const printTotal = () => {
       rgba(45, 255, 60, 1) 0%,
       rgba(159, 159, 222, 1) 100%`
   }
-  else if(totalValue == 0){
+  else if(totalValue == 0 || totalValue == -0){
     ball.style.background = 'rgb(60, 225, 222)'
     ball.style.background = `linear-gradient(
       -90deg,
