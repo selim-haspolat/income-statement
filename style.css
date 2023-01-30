@@ -1,0 +1,137 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+i {
+  cursor: pointer;
+}
+
+#main-container {
+  min-height: 100vh;
+  opacity: 0;
+  animation: main 0.5s 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#child-main{
+    height: 100vh;
+}
+
+#result-screen{
+    height: 100vh;
+    max-height: calc(100vh - 400px);
+    overflow: auto;
+}
+
+#result {
+  border: 1px solid rgba(0, 0, 0, 0);
+  min-height: 200px;
+  position: relative;
+}
+
+#headers {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#headers th {
+  width: 33%;
+  font-weight: 400;
+}
+
+#outcome table {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#outcome td {
+  width: 30%;
+  padding: 0.3rem 0.5rem;
+}
+
+#show-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  position: absolute;
+  bottom: -0.7rem;
+  left: 7%;
+  letter-spacing: 0.2rem;
+}
+#result hr {
+  width: 90%;
+  position: absolute;
+  bottom: 1.3rem;
+  right: 5%;
+}
+
+.start-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.ball {
+    width: 30px;
+    height: 30px;
+    background: rgb(101, 211, 143);
+    background: linear-gradient(
+        -90deg,
+        rgba(101, 211, 143, 1) 0%,
+    rgba(159, 159, 222, 1) 100%
+    );
+    border-radius: 50%;
+    animation: ball 2s;
+
+    animation-fill-mode: forwards;
+}
+@keyframes ball {
+  0% {
+    transform: translate(0, -600px);
+  }
+  20% {
+    transform: translate(0, 0px);
+  }
+  35% {
+    transform: scale(2);
+  }
+  45% {
+    transform: scale(1.5);
+  }
+  55% {
+    transform: scale(5);
+  }
+  65% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(90);
+  }
+}
+
+
+@media screen and (min-width:995px) {
+    #result-screen{
+        max-height: 80vh;
+    }
+}
